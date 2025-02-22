@@ -11,8 +11,8 @@
 	${loginError}
 		<table>
 			<tr>
-				<td>UserName : </td>
-				<td><input type="text" name="userName" /> </td>
+				<td>Email ID : </td>
+				<td><input type="text" name="emailid" /> </td>
 			</tr>
 			<tr>
 				<td>Password : </td>
@@ -20,7 +20,8 @@
 			</tr>
 			<tr>
 				<td> </td>
-				<td><input type="submit"/> </td>
+				<td><input type="submit"/>  <a href='forgetpassword.jsp'> Forget Password? </td>
+					 
 			</tr>
 		</table>
 	</form>

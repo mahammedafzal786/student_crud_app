@@ -207,6 +207,8 @@ public class StudentDao {
 					String std = rs.getString(3);
 					int marks = rs.getInt(4);
 					
+					System.out.println(+rno+" "+name+" "+" "+std+" "+marks);
+					
 					sbean = new StudentBean(rno,name,std,marks);
 					
 					return sbean;

@@ -18,20 +18,22 @@ public class LoginServlet extends HttpServlet
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-		String userName = request.getParameter("userName");
+		String emailid = request.getParameter("emailid");
 		String password = request.getParameter("password");
 		RequestDispatcher rd = null;
-		if (userName!=null  && password != null) 
+		if (emailid!=null  && password != null) 
 		{
 			
+			System.out.println("emailid :"+emailid);
+			System.out.println("password :"+password);
 			UserDao userDao = new UserDao();
 			
-			UserBean userBean = userDao.getUserByEmailId(userName, password);
+			UserBean userBean = userDao.getUserByEmailId(emailid, password);
 			
 			System.out.println("userBean :"+userBean);
 			if(userBean != null) {
 				HttpSession session = request.getSession();
-				session.setAttribute("userName", userName);
+				session.setAttribute("userName", emailid);
 				rd = request.getRequestDispatcher("registration.jsp");
 			} else 
 			{
